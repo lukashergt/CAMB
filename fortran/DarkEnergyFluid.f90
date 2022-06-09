@@ -77,6 +77,7 @@
     class(TDarkEnergyFluid), intent(inout) :: this
     class(TCAMBdata), intent(in), target :: State
 
+    write(*,*) 'TDarkEnergyFluid_Init'
     call this%TDarkEnergyEqnOfState%Init(State)
 
     if (this%is_cosmological_constant) then
